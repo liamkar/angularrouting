@@ -44,6 +44,10 @@ angular
       'controller': 'CartCtrl as cart'
     });
 
-
+    $stateProvider.state('redBrick.cart', {
+      'url': '/cart',
+      'templateUrl': 'views/cart.html',
+      'controller': 'CartCtrl as cart'
+    });
 
   }]);
