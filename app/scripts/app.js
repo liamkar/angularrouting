@@ -20,6 +20,20 @@ angular
       //'controller': ''
     });
 
+    $stateProvider.state('brick', {
+      url: '/bricks/:color',
+      templateUrl: 'views/bricks.html',
+      controllerProvider: function($stateParams) {
+        let color = $stateParams.color;
+        color = color[0].toUpperCase() + color.slice(1);
+        let ctrlName = color+'BricksCtrl';
+        return ctrlName;
+      },
+      controllerAs: 'brick'
+    });
+
+
+/*
     $stateProvider.state('redBrick', {
       'url': '/bricks/red',
       'templateUrl': 'views/bricks.html',
@@ -37,13 +51,22 @@ angular
       'templateUrl': 'views/bricks.html',
       'controller': 'BlueBricksCtrl as brick'
     });
-
+*/
     $stateProvider.state('cart', {
       'url': '/cart',
       'templateUrl': 'views/cart.html',
       'controller': 'CartCtrl as cart'
     });
 
+    $stateProvider.state('brick.cart', {
+      'url': '/cart',
+      'templateUrl': 'views/cart.html',
+      'controller': 'CartCtrl as cart'
+    });
+
+
+
+/*
     $stateProvider.state('redBrick.cart', {
       'url': '/cart',
       'templateUrl': 'views/cart.html',
@@ -61,5 +84,5 @@ angular
       'templateUrl': 'views/cart.html',
       'controller': 'CartCtrl as cart'
     });
-
+*/
   }]);
