@@ -14,10 +14,28 @@ angular
     $urlRouterProvider.otherwise('/');
 
     $stateProvider.state('home', {
-      'url':'/',
-      'templateUrl': 'views/instructions.html'//,
+      'url': '/',
+      'templateUrl': 'views/instructions.html' //,
       //i guess no controller needed as no external data is needed
       //'controller': ''
+    });
+
+    $stateProvider.state('redBrick', {
+      'url': '/bricks/red/',
+      'templateUrl': 'views/bricks.html',
+      'controller': 'RedBricksCtrl as brick '
+    });
+
+    $stateProvider.state('greenBrick', {
+      'url': '/bricks/green',
+      'templateUrl': 'views/bricks.html',
+      'controller': 'GreenBricksCtrl as brick '
+    });
+
+    $stateProvider.state('blueBrick', {
+      'url': '/bricks/blue',
+      'templateUrl': 'views/bricks.html',
+      'controller': 'blueBricksCtrl as brick '
     });
 
 
