@@ -38,5 +38,12 @@ angular
       'controller': 'BlueBricksCtrl as brick'
     });
 
+    $stateProvider.state('cart', {
+      'url': '/cart',
+      'templateUrl': 'views/cart.html',
+      'controller': 'CartCtrl as cart'
+    });
+
+
 
   }]);
