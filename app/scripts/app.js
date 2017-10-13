@@ -50,4 +50,16 @@ angular
       'controller': 'CartCtrl as cart'
     });
 
+    $stateProvider.state('greenBrick.cart', {
+      'url': '/cart',
+      'templateUrl': 'views/cart.html',
+      'controller': 'CartCtrl as cart'
+    });
+
+    $stateProvider.state('blueBrick.cart', {
+      'url': '/cart',
+      'templateUrl': 'views/cart.html',
+      'controller': 'CartCtrl as cart'
+    });
+
   }]);
