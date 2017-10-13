@@ -35,7 +35,7 @@ angular
     $stateProvider.state('blueBrick', {
       'url': '/bricks/blue',
       'templateUrl': 'views/bricks.html',
-      'controller': 'blueBricksCtrl as brick'
+      'controller': 'BlueBricksCtrl as brick'
     });
 
 
